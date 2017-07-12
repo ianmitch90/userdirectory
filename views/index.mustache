@@ -2,12 +2,22 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Robo Linked in</title>
+    <title>Robo Linked-in</title>
+    <link rel="stylesheet" href="/master.css">
   </head>
-  <body>
-<head>
-  Get you a robot to replace you!
-</head>
+<h1>Robots for Hire</h1>
+
+    <body>
+      <div class = "gridwrap">
+        {{#users}}
+        <div class = "userwrapper">
+        <img src={{avatar}} alt="">
+      <a href = '{{id}}'>{{name}}</a>
+      <h2>{{#job}}{{job}}, {{/job}}{{#company}}{{company}}{{/company}}</h2>
+      <h2>{{^job}}available for hire{{/job}}</h2>
+      </div>
+      {{/users}}
+    </div>
 
   </body>
 </html>
